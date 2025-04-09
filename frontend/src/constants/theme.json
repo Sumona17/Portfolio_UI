@@ -1,0 +1,13 @@
+{
+    "light": {
+      "loginSectionColor": "#2f80ed",
+      "loginSectionSubtitle": "#333",
+      "loginText": "#6b7180"
+    },
+    "dark": {
+      "loginSectionColor": "#ffffff",
+      "loginSectionSubtitle": "#ccc",
+      "loginText": "#aaa"
+    }
+  }
+  
