@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import themes from "constants/theme.json";
+import themes from "../../../constants/theme.json";
 
 export const TableContainer = styled.div`
   border: 1px solid #ececec;

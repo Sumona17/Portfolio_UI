@@ -8,7 +8,7 @@ const Login = () => {
 
     const handleLogin = () => {
         // Optionally add authentication logic here
-        navigate('/dashboard');
+        navigate('/datapreview');
     };
 
     return (

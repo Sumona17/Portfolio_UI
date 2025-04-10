@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/*" element={<CustomLayout />} />
+        
       </Routes>
     </Router>
   </ThemeProvider>

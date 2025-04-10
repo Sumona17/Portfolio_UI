@@ -3,6 +3,7 @@ import { Layout } from "antd";
 import Header from "../components/Header/Header";
 import CustomFooter from "../components/Footer/Footer";
 import { Routes, Route } from "react-router-dom"; 
+import DataPreview from "../pages/CommercialProperty/datapreview";
 
 
 
@@ -38,9 +39,11 @@ const CustomLayout = () => {
           margin: "0px 0", // Margin above and below the content
           flex: 1, // Allows Content to grow and fill remaining height
         }}
+        
       >
        <Routes>
-          <Route path="/dashboard" element={<div>DAshboard</div>} />
+          <Route path="/dashboard" element={<div>Dashboard</div>} />
+          <Route path="/datapreview" element={<DataPreview/>} />
          {/* <Route path="/model-details/claim-severity" element={<Tab/>}/> */}
           
         </Routes>
