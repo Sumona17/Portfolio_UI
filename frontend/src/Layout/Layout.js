@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import CustomFooter from "../components/Footer/Footer";
 import { Routes, Route } from "react-router-dom"; 
 import DataPreview from "../pages/CommercialProperty/datapreview";
+import PropertyStepper from "../pages/CommercialProperty/PropertyStepper";
 
 
 
@@ -42,8 +43,8 @@ const CustomLayout = () => {
         
       >
        <Routes>
-          <Route path="/dashboard" element={<div>Dashboard</div>} />
-          <Route path="/datapreview" element={<DataPreview/>} />
+          <Route path="/commercialProperty" element={<PropertyStepper/>} />
+          {/* <Route path="/datapreview" element={<DataPreview/>} /> */}
          {/* <Route path="/model-details/claim-severity" element={<Tab/>}/> */}
           
         </Routes>

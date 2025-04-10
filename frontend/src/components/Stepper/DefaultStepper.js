@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'antd';
 import arrow from '../../assets/images/arrow.png';
-import { Container } from "styles/pages/CreateQuote";
+import { Container } from "../../styles/pages/CommercialProperty/index";
 import moment from 'moment';
-import { StyledContainerDiv } from 'styles/components/Stepper';
+import { StyledContainerDiv } from '../../styles/components/Stepper/index';
 
 const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handlePrevStep, handleDataAddition, handleDataloss, children, setOpen, setViewPolicy }) => {
     const [form] = Form.useForm();
@@ -11,10 +11,14 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
     const [triggeredBy, setTriggeredBy] = useState('');
     const [initialValues, setInitialValues] = useState({});
     const [newpathName, setNewpathName] = useState('')
+    
+    // eslint-disable-next-line no-restricted-globals
     const PathName = location.pathname
+    
     const setHandleOpen = () => {
         setOpen(true)
     }
+    
     useEffect(() => {
         if (state && Object.keys(state)) {
             const defaultValues = {
@@ -53,7 +57,6 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
                 "purchasedleased": "owned",
                 "estimatedannualmileage": "5665",
                 "odometerreading": "233",
-               
             }
 
             setInitialValues(defaultValues);
@@ -63,15 +66,14 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
 
     useEffect(() => {
         if (PathName.includes('edit-quote')) {
+            // eslint-disable-next-line no-restricted-globals
             const match = location.pathname.match(/\/edit-quote\/(\d+)/);
             const quoteNumber = match ? match[1] : null;
             setNewpathName(`Quote - #${quoteNumber}`)
         } else {
-            setNewpathName('Create Application')
+            setNewpathName('Excess & Surplus Lines Rate Management')
         }
     }, [PathName])
-
-
 
     const handleButtonClick = (buttonName) => {
         setTriggeredBy(buttonName);
@@ -94,8 +96,8 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
             });
             form.resetFields();
         }
-
     }
+    
     const handleDatalossinfo = (values) => {
         if (values.losshistoryInfo.CauseofLoss !== undefined) {
             var newAddtionallossInfo = null;
@@ -113,7 +115,6 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
             });
             form.resetFields();
         }
-
     }
 
 
@@ -131,7 +132,6 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
             if (triggeredBy === 'next') {
                 setTriggeredBy('')
                 handleNextStep(); // Call the next step handler
-
             } else {
                 setTriggeredBy('')
                 handleDataAddition(values);
@@ -147,78 +147,11 @@ const DefaultStepper = ({ theme, state, steps, activeStep, handleNextStep, handl
     const viewIssuePolicy = () => {
         setViewPolicy(true);
     };
+    
     return (
-        // <Container>
-        //     <div className="stepper-container">
-        //         <label className='Quotelabel'>{activeStep < steps.length - 1 ? newpathName : "Bind Quote"}</label>
-        //         <div className="stepper">
-        //             {steps.map((step, index) => (
-        //                 <div key={index} className={`step ${index <= activeStep ? 'active' : ''}`}>
-        //                     <div className="step-bar" />
-        //                     <div className="step-content">
-        //                         <div className={`circle ${index <= activeStep ? 'filled' : ''}`} />
-        //                         <div className="step-label">{step}</div>
-        //                     </div>
-        //                 </div>
-        //             ))}
-        //         </div>
-
-        //         <Form id="defaultStepper" form={form} initialValues={initialValues} onFinish={handleNext} className="allForm" layout="vertical">
-        //             {/* Render the form passed as children */}
-        //             {children}
-
-        //             <div className='container-box-stepper' style={{ display: 'flex', justifyContent: 'space-between' }}>
-        //                 {/* Back Button aligned to the left */}
-        //                 <div>
-        //                     {activeStep > 0 && (
-        //                         <Button onClick={handlePrevStep} className="stepperbutton">
-        //                             <img src={arrow} style={{ transform: 'rotate(180deg)', marginRight: '5px' }} />
-        //                             Back
-        //                         </Button>
-        //                     )}
-        //                 </div>
-
-        //                 {/* Next/Submit buttons aligned to the right */}
-        //                     {activeStep === steps.length && (
-
-        //                         <StyledContainerDiv>
-        //                             <Button type="submit" htmlType="submit" className="stepperbutton" style={{ marginRight: '20px' }} onClick={() => handleButtonClick('next')}>
-        //                                 Bind Quote
-        //                             </Button>
-        //                             <Button type="submit" onClick={() => setHandleOpen()} className="stepperbutton">
-        //                                 Complete Quote
-        //                             </Button>
-        //                             </StyledContainerDiv>
-
-        //                     )}
-
-        //                 <div className="form-element-btn-next">
-        //                     {!!subSteps.length && activeStep === steps.length + subSteps.length - 1 && (
-        //                         <>
-        //                             <Button type="submit" htmlType="submit" className="stepperbutton" onClick={() => viewIssuePolicy()} style={{ marginRight: '20px' }}>
-        //                                 Issue Policy
-        //                             </Button>
-        //                             <Button type="submit" onClick={() => setHandleOpen()} className="stepperbutton">
-        //                                 Save Application
-        //                             </Button>
-        //                         </>
-        //                     )}
-        //                     {activeStep < 9 && (
-        //                         <>
-        //                             <Button type="primary" htmlType="submit" className="stepperbutton" onClick={() => handleButtonClick('next')}>
-        //                                 Next
-        //                                 <img src={arrow} style={{ marginLeft: '5px' }} />
-        //                             </Button>
-        //                         </>
-        //                     )}
-        //                 </div>
-        //             </div>
-        //         </Form>
-        //     </div>
-        // </Container>
         <Container theme={theme}>
             <div className="stepper-container">
-                <label className='Quotelabel'>{activeStep < 4 ? newpathName : "Bind Quote"}</label>
+                <label className='Quotelabel'>{activeStep < 4 ? newpathName : "Excess & Surplus Lines Rate Management"}</label>
                 <div className="stepper">
                     {steps.map((step, index) => (
                         <div key={index} className={`step ${index <= activeStep ? 'active' : ''}`}>

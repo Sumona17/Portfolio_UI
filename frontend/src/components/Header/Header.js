@@ -142,7 +142,7 @@ export default function PrivateNavbar() {
       children: [
         {
             label: "Commercial Property",
-            key: "searchquote",
+            key: "commercialProperty",
           }
       ]
     },
@@ -152,43 +152,12 @@ export default function PrivateNavbar() {
       children: [
         {
           label: "Vacant Buildings",
-          key: "searchquote",
+          key: "vacantBuildings",
         },
         
       ],
     },
-    // {
-    //   label: "Policy",
-    //   key: "searchpolicy",
-    // },
-    // {
-    //   label: "Customer",
-    //   key: "customer"
-    // },
-    // {
-    //   label: "Documents",
-    //   key: "documents",
-    // },
-    // {
-    //   label: "Claim",
-    //   key: "claim",
-    // },
-    // {
-    //   label: "Reporting & analytics",
-    //   key: "reportingAnalytics",
-    // },
-    // {
-    //   label: "Commissions",
-    //   key: "commissions"
-    // },
-    // {
-    //   label: "Admin",
-    //   key: "admin"
-    // },
-    // {
-    //   label: "Home Owners",
-    //   key: "homeowners"
-    // },
+    
   ];
 
   const [current, setCurrent] = useState("projects");
@@ -198,11 +167,11 @@ export default function PrivateNavbar() {
 
     if (e.key == 'dashboard' || e.key == 'home') {
       navigate('/');
-    } else if (e.key == 'searchquote') {
-      navigate('/search-quote');
+    } else if (e.key == 'commercialProperty') {
+      navigate('/commercialProperty');
     }
-      else if (e.key == 'commauto') {
-        navigate('/commercial-auto');
+      else if (e.key == 'vacantBuildings') {
+        navigate('/vacantBuildings');
       } else if (e.key == 'flood') {
         navigate('/flood');
     } else if (e.key == 'documents') {
