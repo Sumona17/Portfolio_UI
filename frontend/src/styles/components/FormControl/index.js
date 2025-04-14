@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { Input, Button } from "antd";
+const { TextArea } = Input;
+
 
 export const FormDatePickerBox = styled.div`
-  label::after {
+  labeexport l::after {
     visibility: hidden;
   }
   label {
@@ -32,7 +35,7 @@ export const FormDatePickerBox = styled.div`
 `;
 
 export const RadioBtnBox = styled.div`
-  label::after {
+  labeexport l::after {
     visibility: hidden;
   }
   .ant-radio-group {
@@ -68,7 +71,7 @@ export const RadioBtnBox = styled.div`
 `;
 
 export const FormInputFeild = styled.div`
-  label::after {
+  labeexport l::after {
     visibility: hidden;
   }
   label {
@@ -108,7 +111,7 @@ export const FormInputFeild = styled.div`
 `;
 
 export const FormSelect = styled.div`
-  label::after {
+  labeexport l::after {
     visibility: hidden;
   }
   .ant-select-selector {
@@ -167,7 +170,7 @@ export const FormSelect = styled.div`
   }
 `;
 export const FormphonenumberFeild = styled.div`
-  label::after {
+  labeexport l::after {
     visibility: hidden;
   }
   label {
@@ -202,7 +205,7 @@ export const FormphonenumberFeild = styled.div`
   }
 `;
 export const FormCheckBoxStyled = styled.div`
-  width: 100%;
+  widtexport h: 100%;
   .ant-form-item {
     width: 100%;
   }
@@ -218,5 +221,79 @@ export const FormCheckBoxStyled = styled.div`
   .ant-checkbox-checked.ant-checkbox-disabled > .ant-checkbox-inner {
     background: #1677ff;
     border-color: #1677ff;
-  }
+  }  
+`;
+export const Container = styled.div`
+  bordexport er: 1px solid #000;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+`;
+export const TabBar = styled.div`
+  dispexport lay: flex;
+  margin-bottom: 16px;
+`;
+
+export const TabButton = styled.button`
+  backexport ground-color: ${({ active }) => (active ? "#1677ff" : "#ffffff")};
+  color: ${({ active }) => (active ? "#fff" : "#000")};
+  border: 1px solid #1677ff;
+  padding: 6px 12px;
+  margin-right: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+export const ContentWrapper = styled.div`
+  bordexport er: 1px solid #000;
+  padding: 16px;
+`;
+
+export const LabelRow = styled.div`
+  dispexport lay: flex;
+  align-items: center;
+  margin-bottom: 12px;
+`;
+
+export const Label = styled.label`
+  font-weight: 500;
+  font-size: 14px;
+  width: 120px;
+`;
+
+export const StyledInput = styled(Input)`
+  font-style: italic;
+  font-size: 13px;
+  color: #1b3fca;
+`;
+
+export const TextSection = styled.div`
+  display: flex;
+  margin-top: 12px;
+  gap: 12px;
+`;
+
+export const MainTextArea = styled(TextArea)`
+  flex: 3;
+  height: 200px;
+  border: 1px solid #1677ff;
+`;
+
+export const Sidebar = styled.div`
+  flex: 1;
+  border: 1px solid #1677ff;
+  padding: 16px;
+  text-align: center;
+  font-weight: 500;
+`;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+`;
+
+export const StyledButton = styled(Button)`
+  background-color: #1677ff;
+  color: white;
+  border: none;
 `;

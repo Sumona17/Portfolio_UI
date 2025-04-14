@@ -4,6 +4,9 @@ import DefaultStepper from '../../components/Stepper/DefaultStepper';
 import useMetaData from "../../context/metaData";
 import { CommercialProperty } from '../../styles/pages/CommercialProperty';
 import DataPreview from './datapreview';
+import AiInsights from './Aiinsights';
+import RateFactors from './Ratefactors';
+import WhatIf from './Whatif';
 
 
 const PropertyStepper = () => {
@@ -60,30 +63,42 @@ const PropertyStepper = () => {
                     />
                 );
             case 'External Data':
-                return (<></>
-                    // <DynamicForm 
-                    //     state={state}
-                    //     open={open}
-                    //     setOpen={setOpen}
-                    //     theme={theme}
-                    //     formData={formData}
-                    //     applicationData={applicationData}
-                    //     isReviewStep={true}
-                    //     activeStep={activeStep}
-                    //     onNext={handleNextStep}
-                    // />
+                return (
+                    <AiInsights
+                        state={state}
+                        open={open}
+                        setOpen={setOpen}
+                        theme={theme}
+                        formData={formData}
+                        applicationData={applicationData}
+                        isReviewStep={true}
+                        activeStep={activeStep}
+                        onNext={handleNextStep}
+                    />
                 );
             case 'Recommended Rate factors':
-                return (<></>
-                    // <QuotePage 
-                    //     state={{
-                    //         formData,
-                    //         applicationData,
-                    //         selectedProducts: state?.selectedProducts
-                    //     }}
-                    //     theme={theme}
-                    // />
+                return (
+                    <RateFactors
+                        state={{
+                            formData,
+                            applicationData,
+                            selectedProducts: state?.selectedProducts
+                        }}
+                        theme={theme}
+                    />
                 );
+
+                case 'What-if':
+                    return (
+                        <WhatIf
+                            state={{
+                                formData,
+                                applicationData,
+                                selectedProducts: state?.selectedProducts
+                            }}
+                            theme={theme}
+                        />
+                    );
             default:
                 return null;
         }
