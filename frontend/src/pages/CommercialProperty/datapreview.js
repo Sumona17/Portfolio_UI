@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Tabs } from "antd";
 import { Table } from "antd";
 import { TableContainer, Tabletitle } from "../../styles/components/TableComponent/index"; // Adjust path if needed
+import Analysis from "./Analysis";
 
 const { TabPane } = Tabs;
 
@@ -100,7 +101,7 @@ const DataPreview = () => {
           <Tabletitle>Analytics Section</Tabletitle>
           {/* Placeholder content */}
           <p style={{ padding: "1rem", color: "#888" }}>
-            Analytics dashboard coming soon.
+          <Analysis/>
           </p>
         </TableContainer>
       </TabPane>
