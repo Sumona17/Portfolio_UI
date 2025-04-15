@@ -9,6 +9,8 @@ import {
   Sidebar,
   ButtonRow,
 } from "../../styles/components/FormControl/index";
+import Geospatial from "./Geospatial";
+import WildfireRiskDashboard from "./Geospatial";
 
 const { TextArea } = Input;
 const { TabPane } = Tabs;
@@ -43,7 +45,7 @@ const AiInsights = () => {
         </TabPane>
 
         <TabPane tab="Geospatial Insights" key="2">
-          
+          <WildfireRiskDashboard/>
         </TabPane>
       </Tabs>
     </Container>

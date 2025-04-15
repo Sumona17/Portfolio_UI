@@ -5,6 +5,7 @@ import CustomFooter from "../components/Footer/Footer";
 import { Routes, Route } from "react-router-dom"; 
 import DataPreview from "../pages/CommercialProperty/datapreview";
 import PropertyStepper from "../pages/CommercialProperty/PropertyStepper";
+import NewProgram from "../pages/CommercialProperty/NewProgram";
 
 
 
@@ -44,6 +45,7 @@ const CustomLayout = () => {
       >
        <Routes>
           <Route path="/commercialProperty" element={<PropertyStepper/>} />
+          <Route path="/vacantBuildings" element={<NewProgram/>} />
           {/* <Route path="/datapreview" element={<DataPreview/>} /> */}
          {/* <Route path="/model-details/claim-severity" element={<Tab/>}/> */}
           
