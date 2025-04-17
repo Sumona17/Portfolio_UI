@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button, Tabs } from "antd";
+import { Input, Button, Tabs, Card } from "antd";
 import {
   Container,
   ContentWrapper,
@@ -31,12 +31,17 @@ const AiInsights = () => {
               />
             </LabelRow>
 
-            <TextSection>
+            {/* <TextSection>
               <TextArea rows={6} placeholder="AI-generated insight will appear here" />
               <Sidebar>
                 <p>Information Sources</p>
               </Sidebar>
-            </TextSection>
+            </TextSection> */}
+            <Card className="mb-4 h-64 flex items-center justify-center" style={{marginTop:'20px', height:'300px'}} >
+                        <div className="text-center">
+                          <Label>Information Sources</Label>
+                        </div>
+                      </Card>
 
             <ButtonRow>
               <Button type="primary">Add to Insights</Button>

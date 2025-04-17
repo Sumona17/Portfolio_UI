@@ -420,17 +420,17 @@ const WildfireRiskDashboard = () => {
             </Button>
           </div>
           <TextSection>
-            <Card rows={6} style={{width:'800px', height:'300px'}}>
+            <Card rows={6} style={{width:'850px', height:'400px'}}>
               <div className="h-64 w-full">
                 {/* Google Maps container */}
-                <div ref={mapRef} style={{ width: '100%', height: '250px' }} />
+                <div ref={mapRef} style={{ width: '100%', height: '350px' }} />
               </div>
             </Card>
             <Card style={{width:'300px'}}>
               <p>Information Sources</p>
             </Card>
           </TextSection>
-          <Card className="mb-4 h-64 flex items-center justify-center" style={{marginTop:'20px'}}>
+          <Card className="mb-4 h-64 flex items-center justify-center" style={{marginTop:'20px', height:'300px'}}>
             <div className="text-center">
               <Label>Insights</Label>
             </div>
